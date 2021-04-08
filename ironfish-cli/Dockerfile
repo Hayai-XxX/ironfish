@@ -5,7 +5,7 @@ COPY ./ ./
 
 RUN \
     apt-get update && \
-    apt-get install jq rsync -y && \
+    apt-get install jq rsync curl -y && \
     curl https://sh.rustup.rs -sSf | sh -s -- -y && \
     cargo install wasm-pack && \
     ./ironfish-cli/scripts/build.sh
